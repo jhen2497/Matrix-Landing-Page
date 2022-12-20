@@ -1,9 +1,13 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FD5D14;
+    --primary: #004087;
     --secondary: #FDBE33;
     --light: #F4F6F8;
-    --dark: #040F28;
+    --dark: #e3033a;
+}
+
+body, html {
+    font-family: 'Open Sans';
 }
 
 .pt-6 {
@@ -77,11 +81,22 @@
 .back-to-top {
     position: fixed;
     display: none;
-    left: 50%;
-    bottom: 0;
-    margin-left: -22px;
+    right: 4%;
+    bottom: 1%;
     border-radius: 0;
     z-index: 99;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background-color: #004087;
+    border: none;
+    border-color: #004087;
+    color: #F4F6F8;
+}
+.back-to-top .bi-arrow-up:hover,
+.back-to-top .bi-arrow-up:focus {
+    color: #F4F6F8;
 }
 
 .bg-dark-radial {
@@ -102,25 +117,62 @@
     background-size: 3px 3px;
 }
 
+.sticky-top {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-dark .navbar-brand {
+    width: 10%;
+}
+
+.navbar-dark .navbar-brand img {
+    width: 100%;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     position: relative;
-    padding: 35px 15px;
-    font-size: 18px;
+    font-size: 15px;
+    padding: 1rem 1rem;
+    font-weight: 600;
     text-transform: uppercase;
-    color: var(--light);
+    color: #1f1f1f;
     outline: none;
     transition: .5s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #e3033a;
+}
+
+.navbar-toggler .fa-bars {
+    color: #1f1f1f;
+}
+.navbar-dark .navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: #F4F6F8;
+    border: none;
+    border-radius: false;
+    transition: box-shadow 0.15s ease-in-out;
 }
 
 @media (max-width: 991.98px) {
     .navbar-dark .navbar-nav .nav-link  {
         margin-left: 0;
         padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sticky-top {
+        padding-top: 0rem !important;
+        padding-bottom: 0rem !important;
+    }
+    .navbar-dark .navbar-brand {
+        width: 20% !important;
     }
 }
 
@@ -133,15 +185,39 @@
     z-index: 1;
 }
 
+.carousel-caption h4 {
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.carousel-caption p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
 @media (max-width: 576px) {
     .carousel-caption h4 {
-        font-size: 18px;
-        font-weight: 500 !important;
+        font-size: 18px !important;
+    }
+    
+    .carousel-caption p {
+        font-size: 15px !important;
     }
 
-    .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 600 !important;
+    .carousel-caption .carousel-caption-content {
+        max-width: 300px !important;
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .carousel-caption h4 {
+        font-size: 25px !important;
+    }
+    
+    .carousel-caption p {
+        font-size: 20px !important;
+    }
+    .carousel-caption .carousel-caption-content {
+        max-width: 700px !important;
     }
 }
 
@@ -254,9 +330,29 @@
         width: 1px;
         height: 100%;
         top: 0;
-        left: 50%;
+        left: 30%;
         background: var(--primary)
     }
+}
+
+@media screen and (max-width: 576px) {
+    .footer .navbar-brand img {
+        width: 30% !important;
+    }
+}
+.footer {
+    background-color: #1f1f1f;
+    padding: 30px 30px;
+}
+
+.footer-text {
+    color: #1f1f1f;
+    font-weight: 700;
+    text-align: center;
+}
+
+.footer .navbar-brand img {
+    width: 20%;
 }
 
 .footer-shape::before {

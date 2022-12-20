@@ -63,6 +63,6 @@
         dots: false,
         loop: true,
     });
-    
+
 })(jQuery);
 
